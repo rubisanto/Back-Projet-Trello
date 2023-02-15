@@ -20,9 +20,15 @@ async function update(id, data) {
   return task
 }
 
+async function remove(id) {
+  const task = await tasksRepository.remove(id)
+  return task
+}
+
 module.exports = {
   findAll,
   findOne,
   create,
   update,
+  remove,
 }

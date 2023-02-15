@@ -34,9 +34,21 @@ async function update(id, data) {
   return rows[0]
 }
 
+async function remove(id) {
+  const { rows } = await Pool.query(
+    `
+    DELETE FROM tasks
+    WHERE id=$1
+    RETURNING title, category`,
+    [id],
+  )
+  return rows[0]
+}
+
 module.exports = {
   findAll,
   findOne,
   create,
   update,
+  remove,
 }

@@ -34,9 +34,20 @@ async function update(req, res) {
   }
 }
 
+async function remove(req, res) {
+  const id = req.params.id
+  try {
+    const task = await tasksService.remove(id)
+    res.send(task)
+  } catch (err) {
+    res.status(404).send({ error: err.message, status: 404 })
+  }
+}
+
 module.exports = {
   findAll,
   findOne,
   create,
   update,
+  remove,
 }

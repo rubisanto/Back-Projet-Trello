@@ -8,5 +8,6 @@ tasksRouter.get('/', tasksController.findAll)
 tasksRouter.get('/:id', tasksController.findOne)
 tasksRouter.post('/', tasksController.create)
 tasksRouter.put('/:id', tasksController.update)
+tasksRouter.delete('/:id', tasksController.remove)
 
 module.exports.tasksRouter = tasksRouter
