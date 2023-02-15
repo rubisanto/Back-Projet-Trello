@@ -1,0 +1,2 @@
+###Retrieve all tasks
+GET http://localhost:3000/tasks
