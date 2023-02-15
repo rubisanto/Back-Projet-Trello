@@ -10,7 +10,8 @@ Content-Type: application/json
 
 {
       "title": "test post",
-      "category": "DONE"
+      "category": "TODO"
+      
 }
 
 ### Update client
