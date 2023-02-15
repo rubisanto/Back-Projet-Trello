@@ -10,7 +10,19 @@ async function findOne(id) {
   return task
 }
 
+async function create(data) {
+  const task = await tasksRepository.create(data)
+  return task
+}
+
+async function update(id, data) {
+  const task = await tasksRepository.update(id, data)
+  return task
+}
+
 module.exports = {
   findAll,
   findOne,
+  create,
+  update,
 }
