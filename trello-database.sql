@@ -9,12 +9,12 @@ CREATE TABLE IF NOT EXISTS tasks (
 INSERT INTO
     tasks (title, category)
 VALUES
-    ('test 1', 'In Progress');
+    ('test 1', 'In progress');
 
 INSERT INTO
     tasks (title, category)
 VALUES
-    ('test 2', 'To Do');
+    ('test 2', 'To do');
 
 INSERT INTO
     tasks (title, category)
