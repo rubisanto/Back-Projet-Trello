@@ -8,13 +8,15 @@ require('dotenv').config()
 const app = express()
 app.use(express.json())
 app.use(cors())
-app.get('*', (req, res) => {
-  res.status(404).send({ error: 'Not found', status: 404 })
-})
+
 app.use('/tasks', tasksRouter)
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   res.status(500).send({ error: err.message, status: 500 })
+})
+// 404
+app.get('*', (req, res) => {
+  res.status(404).send({ error: 'Not found', status: 404 })
 })
 
 const PORT = process.env.PORT || 3000
